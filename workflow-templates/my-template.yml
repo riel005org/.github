@@ -1,11 +1,17 @@
-name: my-workflow-temp
+name: Octo Organization CI
 
-env:
- name: world
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
 
 jobs:
-  sayHello:
+  build:
+    runs-on: ubuntu-latest
+
     steps:
-      -name: hello
-       run: |
-         echo "hello ${{ env.name }}"
+      - uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo Hello from Octo Organization
