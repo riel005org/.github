@@ -1,3 +1,4 @@
-    workflow-templates
-
-/my-workflow-temp.yml
+{
+  "name": "my-workflow-temp"
+  "description": "This is a template workflow"
+}
